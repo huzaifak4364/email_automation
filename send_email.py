@@ -34,9 +34,10 @@ def send_email(row):
     items = row[13]
 
     items_list = items.split('\n')
-    new_items = " "
+    new_items = ' '
     for item in items_list:
         new_items += '\n' + item
+        print(item)
 
 
 
