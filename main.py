@@ -35,4 +35,4 @@ while True:
         send_email(df.iloc[-1])  #
         initial_rows = current_rows
 
-    time.sleep(1)
+    time.sleep(3)
