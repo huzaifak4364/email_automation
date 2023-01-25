@@ -33,10 +33,10 @@ def send_email(row):
     date = row[10]
     items = row[13]
 
-    items_list = items.split("/n")
-    new_items = ""
+    items_list = items.split('\n')
+    new_items = " "
     for item in items_list:
-        new_items += "\n" + item
+        new_items += '\n' + item
 
 
 
