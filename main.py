@@ -4,6 +4,7 @@ import time
 from send_email import send_email
 from google.oauth2.credentials import Credentials
 from google.oauth2.service_account import Credentials
+import gc
 import json
 
 
@@ -34,5 +35,5 @@ while True:
 
         send_email(df.iloc[-1])  #
         initial_rows = current_rows
-
-    time.sleep(3)
+        df = None
+        gc.collect()
