@@ -31,7 +31,8 @@ def send_email(row):
     postal_code = row[8]
     payment_method = row[9]
     date = row[10]
-    items = row[13]
+    items = row[13].replace('\n', '</br>')
+    items = row[13].replace('\n', '</br>')
 
     items_list = items.split('\n')
     new_items = ' '
@@ -82,7 +83,7 @@ def send_email(row):
   <p>Province:{province}</p>
   <p>Postal Code:{postal_code}</p>
   <p>Payment Method:{payment_method}</p>
-  <p>Order Details:{new_items}</p>
+  <p>Order Details:{items}</p>
   <p>If there are any concerns please reply to this email with your problem</p>
 </body>
 </html>

@@ -31,9 +31,11 @@ while True:
     df = pd.DataFrame(result.get('values', []))
 
     current_rows = df.shape[0]
+    
     if current_rows > initial_rows:
 
         send_email(df.iloc[-1])  #
         initial_rows = current_rows
         df = None
         gc.collect()
+    time.sleep(1)
